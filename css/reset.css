@@ -1,0 +1,310 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video, input {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font-weight: normal;
+   vertical-align: baseline;
+   /*font-family: Microsoft YaHei !important;*/
+ }
+ 
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, menu, nav, section {
+   display: block;
+ }
+ 
+ body {
+   line-height: 1;
+   background:  #fff;
+ }
+ 
+ blockquote, q {
+   quotes: none;
+ }
+ 
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+   content: none;
+ }
+ 
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ 
+ /* custom */
+ a {
+   color: #e8e8e8;
+   text-decoration: none;
+   -webkit-backface-visibility: hidden;
+ }
+ a:hover{
+   color:#1f6cdd;
+ }
+ li {
+   list-style: none;
+ }
+ 
+ ::-webkit-scrollbar {
+   width: 5px;
+   height: 5px;
+ }
+ 
+ ::-webkit-scrollbar-track-piece {
+   background-color: rgba(0, 0, 0, 0.2);
+   -webkit-border-radius: 6px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:vertical {
+   height: 5px;
+   background-color: rgba(125, 125, 125, 0.7);
+   -webkit-border-radius: 6px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:horizontal {
+   width: 5px;
+   background-color: rgba(125, 125, 125, 0.7);
+   -webkit-border-radius: 6px;
+ }
+ 
+ html, body {
+   width: 100%;
+   text-rendering: optimizeLegibility;
+   text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+   font-family: Microsoft Yahei, Helvetica Neue, Roboto, Segoe UI, sans-serif;
+ }
+ 
+ body {
+   -webkit-text-size-adjust: none;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
+ 
+ .font-number{
+      font-family: Helvetica !important;
+      color: #ffd800;
+      font-weight: 600;
+ }
+ /*.clearfix:after {
+   content: ".";
+   display: block;
+   height: 0;
+   line-height: 0;
+   clear: both;
+   visibility: hidden;
+ }
+ */
+ .clearfix:before,.clearfix:after{
+   content:"";
+   display:block;
+ }
+ .clearfix:after{
+   clear:both;
+ }
+ .clearfix{
+   display: inline-block;
+   zoom: 1;
+ }
+
+
+ /* 文字边框 */
+.border-1px-font{
+  position : relative;
+  border:none;
+}
+.border-1px-font:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #dbdbdb;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+}
+.border-1px-fonta{
+  position : relative;
+  border:none;
+}
+.border-1px-fonta:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #cdcdcd;
+  border-radius: 35px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+}
+/* banner文字边框 */
+.border-1px-white{
+  position : relative;
+  border:none;
+}
+.border-1px-white:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+}
+/* 图片边框 */
+.border-1px-img{
+  position : relative;
+  border:none;
+}
+.border-1px-img:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+}
+/* 底部边框 */
+.border-1px{
+position : relative;
+}
+.border-1px:after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #e5e5e5;
+  width: 100%;
+  content: '';
+}
+
+/* 右侧边框 */
+.border-right-1px{
+position : relative;
+}
+.border-right-1px:after{
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid #e5e5e5;
+  height: 100%;
+  content: '';
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5){
+  .border-1px:after{
+      -webkit-transform : scaleY(0.7);
+      transform : scaleY(0.7);
+  }
+  .border-right-1px:after{
+      -webkit-transform : scaleX(0.7);
+      transform : scaleX(0.7);
+  }
+  .border-1px-font:after{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .border-1px-fonta:after{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .border-1px-white:after{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .border-1px-img:after{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .more-item-active:after{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2){
+  .border-1px:after{
+      -webkit-transform : scaleY(0.5);
+      transform : scaleY(0.5);
+  }
+  .border-right-1px:after{
+      -webkit-transform : scaleX(0.5);
+      transform : scaleX(0.5);
+  }
+  .border-1px-font:after{
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .border-1px-fonta:after{
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .border-1px-white:after{
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .border-1px-img:after{
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+  .more-item-active:after{
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+  }
+}
+.border-none{ }
+.border-none:after{
+  display: none
+}
+ 
+ .android-font-weight{
+      font-weight:  bold !important;
+ }
+ .ios-font-weight{
+      font-weight:  550 !important;
+ }
